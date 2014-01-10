@@ -1,0 +1,29 @@
+module Main where
+
+doublefactorial 0 = 1;
+doublefactorial 1 = 1;
+doublefactorial n = n * doublefactorial(n-1);
+
+
+-- Multiplication by addition
+
+multi n 1 = n;
+multi 1 n = n;
+multi n 0 = 0;
+multi 0 n = 0;
+multi m n = m + multi m (n-1);
+
+
+add x = x + x;
+
+main = do
+       putStrLn "Factorial";
+       let fact  = doublefactorial 4;
+       print fact;
+       putStrLn "Addition";
+       let sum = add 4;
+       print sum;
+       putStrLn "Multiplication by addition";
+       let mul = multi 5 3;
+       print mul;
+~                 

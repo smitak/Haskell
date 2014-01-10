@@ -1,0 +1,10 @@
+module Main where
+
+add x = x + x
+
+main =  do
+           putStrLn "Hello World";
+           let y = add 4;
+           print y;
+           putStrLn "Ths is working";
+~                                                                                                                

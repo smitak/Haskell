@@ -1,10 +1,15 @@
 module Main where
 
-add x = x + x
+doublefactorial 0 = 1;
+doublefactorial 1 = 1;
+doublefactorial n = n * doublefactorial(n-1);
 
-main =  do
-           putStrLn "Hello World";
-           let y = add 4;
-           print y;
-           putStrLn "Ths is working";
-~                                                                                                                
+add x = x + x;
+
+main = do
+       putStrLn "Hello World";
+       let fact  = doublefactorial 4;
+       print fact;
+       let sum = add 4;
+       print sum;
+       putStrLn "Ths is working";
